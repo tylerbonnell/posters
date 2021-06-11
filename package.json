@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "tsc",
-    "search": "npm run build && node dist/index.js",
-    "x": "npx ts-node src/index.ts"
+    "search": "npx ts-node src/entry.ts"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +11,7 @@
     "ts-node": "^10.0.0"
   },
   "dependencies": {
-    "axios": "^0.21.1"
+    "axios": "^0.21.1",
+    "node-html-parser": "^3.3.5"
   }
 }
