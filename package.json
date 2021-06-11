@@ -1,0 +1,18 @@
+{
+  "name": "posters",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "tsc",
+    "search": "npm run build && node dist/index.js",
+    "x": "npx ts-node src/index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.0.0"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
