@@ -18,8 +18,6 @@ Promise.all(sources.map(source => source.getPosterUrls())).then(sources => {
 
     console.log(`Found ${listings.size} posters.\n`)
 
-    console.log(listings.get("invisible man"))
-
     const rl = readline.createInterface({
         input: process.stdin,
         output: process.stdout
@@ -30,14 +28,15 @@ Promise.all(sources.map(source => source.getPosterUrls())).then(sources => {
             if (url === "") {
                 process.exit()
             }
+            console.log("\nResults:")
             new LetterboxdList(url).getTitles().then(titles => {
-                // console.log(titles)
                 for (const title of titles) {
                     const listing = listings.get(normalize(title))
                     if (listing) {
                         console.log(`${title} ${listing.url}`)
                     }
                 }
+                console.log()
                 promptForLetterboxd()
             })
         });
